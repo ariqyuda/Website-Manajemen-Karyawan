@@ -1,0 +1,132 @@
+.navbar {
+    overflow: hidden;
+    background-color: #96cddf;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.navbar a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 35px 35px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar div.left {
+    float: left;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.navbar div.left:hover {
+    cursor: pointer;
+}
+
+.navbar a.left {
+    float: left;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.text-left {
+    float: left;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.navbar-image {
+    width: 40px;
+}
+
+.navbar a.right {
+    margin-top: 15px;
+    margin-right: 5px;
+    padding: 5px 10px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #96cddf;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#information-box {
+    background-color: #ffffff;
+    width: 600px;
+    height: 550px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    color: #000000;
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+}
+
+#information-box:target {
+    display: block;
+}
+
+.back {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: blue;
+    text-decoration: none;
+    position: absolute;
+    bottom: 55px;
+    right: 85px;
+}
