@@ -40,7 +40,9 @@ class AdminController extends Controller
     public function home()
     {
         $admin = DB::table('admin')->get();
-        return view('admin-dashboard-home',['admin'=>$admin]);
+        $data_karyawan = DB::table('data_karyawan')->get();
+        return view('admin-dashboard-home',['admin'=>$admin], ['data_karyawan'=>$data_karyawan]);
+
     }
 
     public function datakaryawan()

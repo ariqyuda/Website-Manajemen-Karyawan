@@ -19,9 +19,9 @@
             <a class="navbar-a navbar-a-right" href=""><img class="navbar-icon-left" src="/assets/dashboard/back.png" alt=""></a>
             <a class="navbar-a navbar-a-right" href=""><img class="navbar-icon-left" src="/assets/dashboard/check.png" alt=""></a>
             <a class="navbar-a navbar-a-right" href="#cari-box"><img class="navbar-icon-left" src="/assets/dashboard/search.png" alt=""></a>
-            <form action="" class="search-box" id="cari-box">
+            <form action="/admin/dashboard/data-karyawan/cari" method="get" class="search-box" id="cari-box">
                 <a href=# class="batal"> x </a>
-                <input class="cari-box" type="" name="" placeholder="Cari Data Karyawan" value="">
+                <input class="cari-box" type="" name="cari" placeholder="Cari Data Karyawan" value="{{ old('cari') }}">
                 <input class="cari-data" type="submit" value="CARI">
             </form>
         </nav>
