@@ -1,0 +1,19 @@
+.back-button {
+    background: gray;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.back-button:hover {
+    opacity: 75%;
+}
+
+.text-back {
+    font-size: 15px;
+    color: white;
+
+    text-decoration: none;
+}
