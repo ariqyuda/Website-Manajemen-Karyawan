@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/background-style.css">
         <link rel="stylesheet" href="/css/admin/dashboard-admin.css">
-        <title>Dashboard - Penkar</title>
+        <title>Home - Penkar</title>
         <script src="/js/menu.js"></script>
         <script src="/js/upload_file.js"></script>
     </head>
@@ -19,7 +19,7 @@
             <a class="navbar-a navbar-a-right" href=""><img class="navbar-icon-left" src="/assets/dashboard/back.png" alt=""></a>
             <a class="navbar-a navbar-a-right" href=""><img class="navbar-icon-left" src="/assets/dashboard/check.png" alt=""></a>
             <a class="navbar-a navbar-a-right" href="#cari-box"><img class="navbar-icon-left" src="/assets/dashboard/search.png" alt=""></a>
-            <form action="/admin/dashboard/data-karyawan/cari" method="get" class="search-box" id="cari-box">
+            <form action="cari" method="get" class="search-box" id="cari-box">
                 <a href=# class="batal"> x </a>
                 <input class="cari-box" type="" name="cari" placeholder="Cari Data Karyawan" value="{{ old('cari') }}">
                 <input class="cari-data" type="submit" value="CARI">
@@ -31,24 +31,23 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div>
-                <a class="active" href="">Home</a>
-                <a href="/admin/dashboard/data-karyawan">Data Karyawan</a>
+                <a class="active" href="home'">Home</a>
+                <a href="data-karyawan">Data Karyawan</a>
                 <a href="#information-box">About</a>
             </div>
             <div>
-                <a class="logout" href="/">Log out</a>
+                <a class="logout" href="logout">Log out</a>
             </div>
         </div>
         
 
-        @foreach($admin as $admin)
+       
         <!-- Data Karyawan -->
         <div>
             <div class="welcome-message">
-                Selamat datang kembali {{$admin->uname_admin}}
+                Selamat datang kembali {{ Auth::user()->name }}
             </div>
         </div>
-        @endforeach
 
         <div>
             <a class="tambah-icon" href="#form-tambah-data">+</a>
@@ -56,7 +55,7 @@
 
         <!-- Tambah Data Box -->
         <div>
-            <form id="form-tambah-data" class="" method="post" action="/tambah-data">
+            <form id="form-tambah-data" class="" method="post" action="tambah-data">
             {{csrf_field()}}
                 <a href=# class="tutup-form"> x </a>
                 <div class="container">

@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/background-style.css">
         <link rel="stylesheet" href="/css/admin/dashboard-admin.css">
-        <title>Dashboard - Penkar</title>
+        <title>Data Karyawan - Penkar</title>
         <script src="/js/menu.js"></script>
     </head>
     <body>
@@ -18,7 +18,7 @@
             <a class="navbar-a navbar-a-right" href=""><img class="navbar-icon-left" src="/assets/dashboard/back.png" alt=""></a>
             <a class="navbar-a navbar-a-right" href=""><img class="navbar-icon-left" src="/assets/dashboard/check.png" alt=""></a>
             <a class="navbar-a navbar-a-right" href="#cari-box"><img class="navbar-icon-left" src="/assets/dashboard/search.png" alt=""></a>
-            <form action="/admin/dashboard/data-karyawan/cari" method="get" class="search-box" id="cari-box">
+            <form action="cari" method="get" class="search-box" id="cari-box">
                 <a href=# class="batal"> x </a>
                 <input class="cari-box" type="" name="cari" placeholder="Cari Data Karyawan" value="{{ old('cari') }}">
                 <input class="cari-data" type="submit" value="CARI">
@@ -29,12 +29,12 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div>
-                <a href="/admin/dashboard/home">Home</a>
+                <a href="home">Home</a>
                 <a class="active" href="#">Data Karyawan</a>
                 <a href="#information-box">About</a>
             </div>
             <div>
-                <a class="logout" href="/login">Log out</a>
+                <a class="logout" href="logout">Log out</a>
             </div>
         </div>
         
@@ -46,8 +46,8 @@
                     <div><img class="img-profile" src="/assets/dashboard/profile-photo.png" alt=""></div>
                     <div class="nama-profile">{{$karyawan->nama_karyawan}}</div>
                     <div class="id-profile">{{$karyawan->id_karyawan}}</div>
-                    <a href="/admin/dashboard/data-karyawan/edit/{{ $karyawan->id_karyawan }}"><img class="edit-button" src="/assets/dashboard/edit.png" alt="edit data"></a>
-                    <a href="/hapus/{{ $karyawan->id_karyawan }}"><img class="delete-button" src="/assets/dashboard/delete.png" alt="delete data"></a>
+                    <a href="edit/{{ $karyawan->id_karyawan }}"><img class="edit-button" src="/assets/dashboard/edit.png" alt="edit data"></a>
+                    <a href="hapus/{{ $karyawan->id_karyawan }}"><img class="delete-button" src="/assets/dashboard/delete.png" alt="delete data"></a>
                 </div>
                 @endforeach
             </table>
@@ -56,7 +56,7 @@
 
         <!-- Tambah Data Box -->
         <div>
-            <form id="form-tambah-data" class="" method="post" action="/tambah-data">
+            <form id="form-tambah-data" class="" method="post" action="tambah-data">
             {{csrf_field()}}
                 <a href=# class="tutup-form"> x </a>
                 <div class="container">

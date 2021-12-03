@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/background-style.css">
         <link rel="stylesheet" href="/css/karyawan/dashboard-karyawan.css">
-        <title>Dashboard - Penkar</title>
+        <title>Karyawan Dashboard - Penkar</title>
         <script src="/js/menu.js"></script>
     </head>
     <body>
@@ -16,7 +16,7 @@
             </div>
             <div class="left-text">PENKAR</div>
             <a class="navbar-a navbar-a-right" href="#cari-box"><img class="navbar-icon-left" src="/assets/dashboard/search.png" alt=""></a>
-            <form action="/karyawan/home/cari" class="search-box" id="cari-box">
+            <form action="/karyawan/cari" class="search-box" id="cari-box">
                 <a href=# class="batal"> x </a>
                 <input class="cari-box" type="" name="cari" placeholder="Cari Data Karyawan" value="{{ old('cari') }}">
                 <input class="cari-data" type="submit" value="CARI">

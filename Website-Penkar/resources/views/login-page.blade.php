@@ -2,9 +2,10 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/login-page/login-page-style.css">
         <script src="/js/login.js"></script>
-        <title>Landing Page - Penkar</title>
+        <title>Login Page - Penkar</title>
     </head>
 
     <body>
@@ -19,29 +20,32 @@
         </div>
 
         <div onclick="document.getElementById('login-admin').style.display='block'" href="" class="button button-admin">ADMIN</div>
-        <a href="/karyawan/home" class="button button-karyawan">KARYAWAN</a>
+        <a href="karyawan" class="button button-karyawan">KARYAWAN</a>
 
         <!-- Login Form -->
-        {{csrf_field()}}
+        
         <div id="login-admin" class="modal">
-            <form class="modal-content animate" method="GET" action="/admin/dashboard">
-            
+            <form class="modal-content animate" method="post" action="login">
+            {{csrf_field()}}
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('login-admin').style.display='none'" class="close" title="Close Button">&times;</span>
                 </div>
 
                 <div class="container">
-                    <label for="uname_admin"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname_admin" required>
+                    <label for="username_admin"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
 
-                    <label for="pass_admin"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="pass_admin" required>
+                    <label for="password_admin"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
                         
                     <button type="submit" name="login">Login</button>
                 </div>
 
-                <div class="container" style="background-color:#f1f1f1">
+                <div class="container">
                     <button type="button" onclick="document.getElementById('login-admin').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+                <div class="daftar-akun">
+                    <a href="register">Belum punya akun? Daftar disini</a>
                 </div>
             </form>
         </div>

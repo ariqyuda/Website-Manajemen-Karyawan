@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>DB Universitas Jaya</title>
+		<title>Edit Data Karyawan - Penkar</title>
 
         <link rel="stylesheet" href="/css/admin/admin-edit-data.css">
         <link rel="stylesheet" href="/css/background-style.css">
@@ -14,7 +14,7 @@
 			<br>
 			<h1 class="mb-5">Penkar</h1>
 
-			<button class="back-button"><a class="text-back" href="/admin/dashboard/data-karyawan">Kembali</a></button>
+			<button class="back-button"><a class="text-back" href="/data-karyawan">Kembali</a></button>
 			
 			<br/>
 			<br/>
@@ -23,7 +23,7 @@
 				<div class="col-sm">
 					<h3>Edit Data Karyawan</h3>
 					@foreach($data_karyawan as $karyawan)
-					<form action="/admin/dashboard/data-karyawan/update" method="post">
+					<form action="/update" method="post">
 						{{ csrf_field() }}
 						<input type="hidden" name="id_karyawan" value="{{$karyawan->id_karyawan}}"> <br/>
 						<label>Nama</label>
