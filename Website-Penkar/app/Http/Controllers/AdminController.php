@@ -66,7 +66,9 @@ class AdminController extends Controller
             'nama_karyawan'=>$request->nama_karyawan,
             'tgl_lahir_karyawan'=>$request->tgl_lahir_karyawan,
             'alamat_karyawan'=>$request->alamat_karyawan,
-            'no_hp_karyawan'=>$request->no_hp_karyawan
+            'no_hp_karyawan'=>$request->no_hp_karyawan,
+            'hari_kerja'=>$request->hari_kerja,
+            'jam_kerja'=>$request->jam_kerja
         ]);
 
 		return redirect('data-karyawan');

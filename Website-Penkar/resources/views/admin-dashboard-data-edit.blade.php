@@ -38,6 +38,12 @@
 						<label>No. HP Karyawan</label>
 						<input class="form-control" id="no_hp_karyawan" type="text" required="required" name="no_hp_karyawan" value="{{$karyawan->no_hp_karyawan}}">
 						<br> 
+						<label>Hari Kerja</label>
+						<input class="form-control" id="hari_kerja" type="text" required="required" name="hari_kerja" value="{{$karyawan->hari_kerja}}">
+						<br> 
+						<label>Jam Kerja</label>
+						<input class="form-control" id="jam_kerja" type="text" required="required" name="jam_kerja" value="{{$karyawan->jam_kerja}}">
+						<br> 
 								
 						<div class=" d-grid gap-2 col-6 mx-auto ">
 						<button class="btn btn-primary" type="submit" value="Simpan Data">Simpan</button>

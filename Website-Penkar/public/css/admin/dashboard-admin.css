@@ -218,11 +218,38 @@ a.logout {
 
 .id-profile {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     
     position: absolute;
     margin-left: 110px;
     margin-top: 35px;
+}
+
+.hari-kerja{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 60px;
+}
+
+.strip-simbol {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    
+    position: absolute;
+    margin-left: 235px;
+    margin-top: 60px;
+}
+
+.jam-kerja {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    
+    position: absolute;
+    margin-left: 255px;
+    margin-top: 60px;
 }
 
 .edit-button {

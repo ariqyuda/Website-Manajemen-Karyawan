@@ -46,6 +46,9 @@
                     <div><img class="img-profile" src="/assets/dashboard/profile-photo.png" alt=""></div>
                     <div class="nama-profile">{{$karyawan->nama_karyawan}}</div>
                     <div class="id-profile">{{$karyawan->id_karyawan}}</div>
+                    <div class="hari-kerja">{{$karyawan->hari_kerja}}</div>
+                    <div class="strip-simbol">/</div>
+                    <div class="jam-kerja">{{$karyawan->jam_kerja}}</div>
                     <a href="edit/{{ $karyawan->id_karyawan }}"><img class="edit-button" src="/assets/dashboard/edit.png" alt="edit data"></a>
                     <a href="hapus/{{ $karyawan->id_karyawan }}"><img class="delete-button" src="/assets/dashboard/delete.png" alt="delete data"></a>
                 </div>
@@ -88,43 +91,6 @@
                     <button type="submit" name="insertDataKaryawan">Tambah Data</button>
                    
                 </div>
-            </form>
-        </div>
-
-        <!-- Edit Data Box -->
-        <div>
-        @foreach($data_karyawan as $karyawan)
-            <form id="form-edit-data" class="" method="post" action="/admin/dashboard/data-karyawan/update">
-                <a href=# class="tutup-form"> x </a>
-                <div class="container">
-                    <div class="judul-form">Edit Data Karyawan</div>
-                    <br>
-                    <label for="id_karyawan"><b>Id Karyawan</b></label><br>
-                    <input type="text" name="id_karyawan" value="{{$karyawan->id_karyawan}}"><br>
-
-                    <label for="nama_karyawan"><b>Nama</b></label><br>
-                    <input id="nama_siswa" type="text" required="required" name="nama_karyawan" value="{{$karyawan->nama_karyawan}}"><br>
-                    
-                    <label for="jk_karyawan"><b>Jenis Kelamin</b></label><br>
-                        <select id="jk_karyawan" required="required" name="jk_karyawan" value="{{$karyawan->jk_karyawan}}">
-                            <option selected disabled >Pilih</option>
-                            <option> Laki-laki </option>
-                            <option> Perempuan </option>
-                        </select><br><br>
-
-                    <label for="tgl_lahir_karyawan"><b>Tanggal lahir</b></label><br>
-                    <input type="date" required="required" name="tgl_lahir_karyawan" value="{{$karyawan->tgl_lahir_karyawan}}"><br><br>
-
-                    <label for="alamat_karyawan"><b>Alamat</b></label><br>
-                    <input type="text" required="required" name="alamat_karyawan" value="{{$karyawan->alamat_karyawan}}"><br>
-
-                    <label for="no_hp_karyawan"><b>No HP</b></label><br>
-                    <input type="text" required="required" name="no_hp_karyawan" value="{{$karyawan->no_hp_karyawan}}"><br>
-
-                    <button type="submit" value="Konfirmasi Pengeditan">Konfirmasi Pengeditan</button>
-                   
-                </div>
-            @endforeach
             </form>
         </div>
 

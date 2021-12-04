@@ -43,6 +43,9 @@
                     <div><img class="img-profile" src="/assets/dashboard/profile-photo.png" alt=""></div>
                     <div class="nama-profile">{{$karyawan->nama_karyawan}}</div>
                     <div class="id-profile">{{$karyawan->id_karyawan}}</div>
+                    <div class="hari-kerja">{{$karyawan->hari_kerja}}</div>
+                    <div class="strip-simbol">/</div>
+                    <div class="jam-kerja">{{$karyawan->jam_kerja}}</div>
                 </div>
                 @endforeach
             </table>

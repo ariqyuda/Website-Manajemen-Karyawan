@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 03:56 PM
+-- Generation Time: Dec 04, 2021 at 11:20 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -33,18 +33,20 @@ CREATE TABLE `data_karyawan` (
   `jk_karyawan` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `tgl_lahir_karyawan` date NOT NULL,
   `alamat_karyawan` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `no_hp_karyawan` varchar(15) NOT NULL
+  `no_hp_karyawan` varchar(15) NOT NULL,
+  `hari_kerja` varchar(255) DEFAULT NULL,
+  `jam_kerja` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `data_karyawan`
 --
 
-INSERT INTO `data_karyawan` (`id_karyawan`, `nama_karyawan`, `jk_karyawan`, `tgl_lahir_karyawan`, `alamat_karyawan`, `no_hp_karyawan`) VALUES
-(21001, 'TM Zahirskun', 'Laki-laki', '2001-01-20', 'Jl Kopelma Darussalam', '085276894532'),
-(21002, 'Fahrezi Chan', 'Laki-laki', '2000-04-21', 'Jl Penerbangan', '085276894212'),
-(21003, 'Yasir Oneesan', 'Laki-laki', '1999-01-20', 'Jl Sama Kamu Ajun', '0852768949065'),
-(21004, 'Dimas Sugawara', 'Laki-laki', '2001-02-20', 'Jl Sama Kamu Kajhu', '085276894901');
+INSERT INTO `data_karyawan` (`id_karyawan`, `nama_karyawan`, `jk_karyawan`, `tgl_lahir_karyawan`, `alamat_karyawan`, `no_hp_karyawan`, `hari_kerja`, `jam_kerja`) VALUES
+(21001, 'TM Zahirskun', 'Laki-laki', '2001-01-20', 'Jl Kopelma Darussalam', '085276894532', 'Senin - Rabu', '09:00 - 17:00'),
+(21002, 'Fahrezi Chan', 'Laki-laki', '2000-04-21', 'Jl Penerbangan', '085276894212', 'Senin - Rabu', '17:00 - 22:00'),
+(21003, 'Yasir Oneesan', 'Laki-laki', '1999-01-20', 'Jl Sama Kamu Ajun', '0852768949065', NULL, NULL),
+(21005, 'Alvian Chan', 'Laki-laki', '1999-04-21', 'Jl Penerbangan Nasional', '085276891765', 'Kamis - Sabtu', '09:00 - 17:00');
 
 -- --------------------------------------------------------
 
@@ -193,7 +195,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `data_karyawan`
 --
 ALTER TABLE `data_karyawan`
-  MODIFY `id_karyawan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21005;
+  MODIFY `id_karyawan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21006;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
